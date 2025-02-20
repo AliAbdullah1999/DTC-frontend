@@ -1,8 +1,8 @@
 <template>
-  <header>
+  <header ref="headerRef">
     <div class="logo">
       <img
-        src="/home/ali-abdullah/Desktop/Projects/CTS/CTS/src/assets/t_transparent.png"
+        src="/home/ali-abdullah/Desktop/Projects/CTS/CTS/src/assets/t_black_logo.png"
         alt="Company Logo"
       />
     </div>
@@ -24,6 +24,9 @@
             >Contact</RouterLink
           >
         </li>
+        <li>
+          <button class="btn" @click="$router.push('/contact')">Get a Quote</button>
+        </li>
       </ul>
       <div class="hamburger" @click="toggleMenu">
         <span></span>
@@ -32,7 +35,7 @@
       </div>
     </nav>
   </header>
-  <div class="blinking-line"></div>
+  <!-- <div class="blinking-line"></div> -->
 </template>
 
 <script setup>
@@ -40,63 +43,101 @@ import { RouterLink } from 'vue-router'
 
 const toggleMenu = () => {
   const menu = document.querySelector('.menu')
-  menu.classList.toggle('active')
+  if (menu) {
+    menu.classList.toggle('active')
+  } else {
+    console.error('Menu element not found')
+  }
 }
+import { onMounted, ref } from 'vue'
+
+const headerRef = ref(null)
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    const header = headerRef.value || document.querySelector('header')
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled')
+    } else {
+      header.classList.remove('scrolled')
+    }
+  })
+})
 </script>
 
 <style scoped>
-/* Header Container */
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.1em 0.5rem;
-  background-color: black;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0px 4px 8px rgba(8, 0, 0, 0.1);
+  border-radius: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-/* Logo Styling */
-.logo h2 {
-  font-family: sans-serif;
-  font-size: 1.5rem;
-  color: white;
-  display: flex;
+header.scrolled {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(0.5px);
+  border-radius: 50px;
+  padding: 0.01em 0.1em;
+  box-shadow: 0px 6px 13px rgba(8, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.logo img {
+  animation: rotation 2s infinite linear;
 }
 
-/* Blinking-line */
 .blinking-line {
   width: 100%;
   height: 2px;
-  background-color: white;
+  background-color: black;
   animation: blink 1s infinite;
 }
+.btn {
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: none;
+  color: white;
+}
 @keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
   50.1%,
   100% {
-    opacity: 0;
+    opacity: 2;
+  }
+  50.1%,
+  60% {
+    opacity: 2;
   }
 }
 
-/* Navigation Bar */
 img {
-  width: 90px;
-  height: 60px;
+  width: 160px;
+  height: 100%;
+  object-fit: contain;
 }
+
 nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 3rem;
-  position: relative;
+  height: 100%;
+  padding-left: 12rem;
 }
 
-/* Navigation Menu */
 .menu {
   display: flex;
-  gap: 2rem;
+  gap: 6rem;
+  /* position: flex-end; */
   list-style: none;
 }
 
@@ -104,9 +145,8 @@ nav {
   display: inline-block;
 }
 
-/* Navigation Links */
 .nav-link {
-  color: white;
+  color: black;
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -115,31 +155,44 @@ nav {
 }
 
 .nav-link:hover {
-  background-color: #f0a500;
+  background-color: black;
   text-decoration: underline;
+  color: white;
 }
 
-/* Active Link Styling */
 .nav-link-active {
   background-color: #555;
+  color: white;
 }
 
-/* Hamburger Menu */
 .hamburger {
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  z-index: 1000;
+  position: relative;
 }
 
 .hamburger span {
-  width: 25px;
+  width: 20px;
   height: 3px;
-  background-color: white;
+  background-color: black;
+  color: white;
 }
 
-/* Mobile and Tablet Styles */
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
+  nav {
+    padding-left: 0;
+  }
+  .logo img {
+    width: 120px;
+  }
   .menu {
     display: none;
     position: absolute;
@@ -147,15 +200,15 @@ nav {
     right: 10px;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    border-color: black;
     border-radius: 10px;
     width: 200px;
     flex-direction: column;
     gap: 20px;
+    color: white;
   }
 
   .menu.active {
-    display: flex;
+    display: flex !important;
   }
 
   .hamburger {

@@ -9,7 +9,6 @@
     </div>
   </section>
 </template>
-
 <script setup>
 const services = [
   { title: 'Web Development', description: 'Custom websites tailored to your business needs.' },
@@ -20,19 +19,24 @@ const services = [
   { title: 'IT Support', description: '24/7 IT support for your business operations.' },
 ]
 </script>
-
 <style scoped>
 .services {
   text-align: center;
-  padding: 5rem 2rem;
-  background-color: #121212; /* Dark theme background */
-  color: #e0e0e0; /* Light text for contrast */
+  align-items: center;
+  padding: 2rem 2rem;
+  background-color: white;
+  color: black;
 }
 
 .services h1 {
   font-size: 3rem;
-  color: #ffffff; /* Bright white for the heading */
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+  display: inline-block;
+  padding-bottom: 0.5rem;
 }
 
 .card-container {
@@ -43,28 +47,81 @@ const services = [
 }
 
 .card {
-  background-color: #1e1e1e; /* Slightly lighter dark background */
-  border: 1px solid #333; /* Subtle border for separation */
-  border-radius: 10px;
-  padding: 1.5rem;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 15px;
+  padding: 2rem;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .card h2 {
-  font-size: 1.5rem;
-  color: #ffffff; /* Bright text for titles */
+  font-size: 1.8rem;
+  color: black;
   margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .card p {
   font-size: 1rem;
-  color: #b0bec5; /* Softer gray for descriptions */
+  color: #030303;
+  line-height: 1.5;
 }
 
 .card:hover {
-  transform: translateY(-10px); /* Lift effect on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow */
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(122, 115, 115, 0.3);
+  background-color: #3b3a3a;
+}
+
+.card:hover h2 {
+  color: white;
+}
+
+.card:hover p {
+  color: white;
+}
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    gap: 1rem;
+    padding-right: 1rem;
+  }
+
+  .card {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    border: 1px solid black; /* Adjust border size */
+  }
+
+  .card h2 {
+    font-size: 1.5rem; /* Smaller heading font size */
+  }
+
+  .card p {
+    font-size: 0.9rem; /* Smaller paragraph font size */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-container {
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .card {
+    padding: 0.8rem;
+    border-radius: 10px; /* Smaller border radius */
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
 }
 </style>

@@ -1,14 +1,22 @@
 <template>
+  <h1>Contact Us</h1>
   <div class="contact">
-    <h1>Contact Us</h1>
     <form @submit.prevent="handleSubmit">
       <input type="text" v-model="name" placeholder="Your Name" required />
       <input type="email" v-model="email" placeholder="Your Email" required />
       <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
-    <p>Email: <a href="mailto:support@webservicesco.com">support@webservicesco.com</a></p>
-    <p>Phone: <a href="tel:+1234567890">+123 456 7890</a></p>
+    <div class="p">
+      <p class="p1">
+        <a href="digitaltransformationcompany@gmail.com"
+          ><strong>Email Us: </strong>Digital Transformation Company</a
+        >
+      </p>
+      <p class="p2">
+        <a href="tel:+92 333 3515910"><strong>Contact Us: </strong>+92 333 3515910</a>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -58,27 +66,36 @@ export default {
 <style scoped>
 .contact {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row-reverse;
+  align-items: right;
   justify-content: center;
   text-align: center;
-  min-height: 100vh;
-  background-color: #121212;
-  color: #ffffff;
+  min-height: 50vh;
+  background-color: white;
+  color: white;
   font-family: Arial, sans-serif;
   padding: 20px;
 }
-
+.p {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  padding-right: 20px;
+  border: #777777;
+}
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: #f9f9f9;
+  color: black;
+  align-items: center;
+  position: center;
 }
 
 form {
   width: 100%;
   max-width: 400px;
-  background-color: #1e1e1e;
+  background-color: white;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -98,8 +115,8 @@ form button {
 
 form input,
 form textarea {
-  background-color: #2a2a2a;
-  color: #ffffff;
+  background-color: white;
+  color: black;
 }
 
 form input::placeholder,
@@ -108,7 +125,7 @@ form textarea::placeholder {
 }
 
 form button {
-  background-color: #ff6600;
+  background-color: black;
   color: #ffffff;
   font-weight: bold;
   cursor: pointer;
@@ -116,16 +133,17 @@ form button {
 }
 
 form button:hover {
-  background-color: #e05500;
+  background-color: wheat;
+  color: black;
 }
 
 a {
-  color: #ff6600;
+  color: black;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #e05500;
+  color: blue;
 }
 </style>

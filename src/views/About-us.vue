@@ -42,8 +42,8 @@
 <style scoped>
 .about-page {
   padding: 2rem;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .about-section {
@@ -61,7 +61,7 @@
 .about-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: white;
+  color: black;
 }
 
 .about-text p {
@@ -79,7 +79,7 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px white;
+  box-shadow: 0px 0px 15px black;
 }
 
 @media (max-width: 768px) {
