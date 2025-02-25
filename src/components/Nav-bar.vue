@@ -9,23 +9,35 @@
     <nav>
       <ul class="menu">
         <li>
-          <RouterLink to="/" class="nav-link" active-class="nav-link-active">Home</RouterLink>
+          <RouterLink to="/" class="nav-link" active-class="nav-link-active" @click="closeMenu"
+            >Home</RouterLink
+          >
         </li>
         <li>
-          <RouterLink to="/about" class="nav-link" active-class="nav-link-active">About</RouterLink>
+          <RouterLink to="/about" class="nav-link" active-class="nav-link-active" @click="closeMenu"
+            >About</RouterLink
+          >
         </li>
         <li>
-          <RouterLink to="/services" class="nav-link" active-class="nav-link-active"
+          <RouterLink
+            to="/services"
+            class="nav-link"
+            active-class="nav-link-active"
+            @click="closeMenu"
             >Services</RouterLink
           >
         </li>
         <li>
-          <RouterLink to="/contact" class="nav-link" active-class="nav-link-active"
+          <RouterLink
+            to="/contact"
+            class="nav-link"
+            active-class="nav-link-active"
+            @click="closeMenu"
             >Contact</RouterLink
           >
         </li>
         <li>
-          <button class="btn" @click="$router.push('/contact')">Get a Quote</button>
+          <button class="btn" @click="navigateToContact">Get a Quote</button>
         </li>
       </ul>
       <div class="hamburger" @click="toggleMenu">
@@ -39,7 +51,7 @@
 </template>
 
 <script setup>
-import { RouterLink } from 'vue-router'
+import { RouterLink, useRouter } from 'vue-router'
 
 const toggleMenu = () => {
   const menu = document.querySelector('.menu')
@@ -63,6 +75,19 @@ onMounted(() => {
     }
   })
 })
+
+const closeMenu = () => {
+  const menu = document.querySelector('.menu')
+  if (menu) {
+    menu.classList.remove('active')
+  }
+}
+
+const router = useRouter()
+const navigateToContact = () => {
+  router.push('/contact')
+  closeMenu()
+}
 </script>
 
 <style scoped>
@@ -70,9 +95,9 @@ header {
   display: flex;
   align-items: center;
   height: 100px;
-  background-color: white;
+  background-color: skyblue;
   box-shadow: 0px 4px 8px rgba(8, 0, 0, 0.1);
-  border-radius: 30px;
+  /* border-radius: 30px; */
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -82,13 +107,10 @@ header {
 header.scrolled {
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(0.5px);
-  border-radius: 50px;
+  /* border-radius: 50px; */
   padding: 0.01em 0.1em;
   box-shadow: 0px 6px 13px rgba(8, 0, 0, 0.1);
   transition: all 0.3s ease;
-}
-.logo img {
-  animation: rotation 2s infinite linear;
 }
 
 .blinking-line {
@@ -183,9 +205,11 @@ nav {
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    height: auto;
-    padding: 10px;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    /* padding-left: 2px; */
+    padding-right: 10px;
   }
   nav {
     padding-left: 0;
@@ -196,9 +220,9 @@ nav {
   .menu {
     display: none;
     position: absolute;
-    top: 60px;
+    top: 80px;
     right: 10px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: skyblue;
     padding: 20px;
     border-radius: 10px;
     width: 200px;

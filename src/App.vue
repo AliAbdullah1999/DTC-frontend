@@ -2,13 +2,13 @@
   <div id="app">
     <Navbar />
     <RouterView />
-    <!-- <Footer /> -->
+    <Footerer />
   </div>
 </template>
 
 <script setup>
 import Navbar from './components/Nav-bar.vue'
-// import Footer from './components/foo-ter.vue'
+import Footerer from './components/foo-ter.vue'
 </script>
 
 <style>

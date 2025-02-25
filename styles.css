@@ -1,0 +1,12 @@
+body {
+    background-image: url('path/to/your/image.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+// Add a class effect
+.effect-class {
+    /* Add your desired effect styles here */
+    transition: all 0.3s ease-in-out;
+}

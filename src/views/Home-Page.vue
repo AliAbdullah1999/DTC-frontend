@@ -12,36 +12,225 @@
       </div>
     </div>
   </div>
-  <div class="about" style="background-color: blanchedalmond">
+
+  <!-- Uncommented About Section -->
+  <div class="about">
     <div class="content">
       <h1>About Us</h1>
       <p>
-        At Digital Transformaiton Company, we are commited to provide top-notch solution for digital
-        problem. We provide services in areas of Digital Marketing, SEO, Website/Web-application
-        development and CCTV solutions. We work hard for providing customer-oriented solutions at
-        affordable price.
+        At Digital Transformation Company, we are committed to providing top-notch solutions for
+        digital problems. We offer services in Digital Marketing, SEO, Website/Web-application
+        development, and CCTV solutions. We work hard to provide customer-oriented solutions at
+        affordable prices.
       </p>
       <p>
-        Our team of experts are always ready to help you with your digital needs. We are commited to
-        provide top-notch solutions that help you grow your business and reach your goals.
+        Our team of experts is always ready to help you with your digital needs. We are committed to
+        providing top-notch solutions that help you grow your business and reach your goals.
       </p>
-      <div class="points" style="display: flex; justify-content: space-around; margin-top: 10px">
+      <div class="points">
         <div><strong>24/7 Support</strong></div>
         <div><strong>Professional Staff</strong></div>
         <div><strong>Fair Prices</strong></div>
         <div><strong>Quality Services</strong></div>
       </div>
-      <h4 style="margin-top: 10px; font-size: 20px">Call us to ask any question</h4>
-      <a href="tel:+92 333 3515910">0333-3515910</a>
-      <div style="margin-top: 10px">
+      <h4>Call us to ask any question</h4>
+      <a href="tel:+92 333 3515910">+92 333-3515910</a>
+      <div>
         <button class="btn" @click="$router.push('/contact')">Request a Quote</button>
       </div>
     </div>
-
     <div class="about-image">
-      <img src="../assets/about.jpg" alt="" />
+      <img src="@/assets/about.jpg" alt="About Us" />
     </div>
   </div>
+
+  <div class="message">
+    <h2 style="font-size: 64px">Our Services</h2>
+    <h1>We Are Here To Grow Your Business Exponentially</h1>
+  </div>
+
+  <div class="special">
+    <div class="services-grid">
+      <div class="service-item" v-for="(service, index) in services" :key="index">
+        <img :src="service.icon" :alt="service.title" />
+        {{ service.title }}
+      </div>
+    </div>
+  </div>
+
+  <div class="tech">
+    <h2>Our Tech Stack</h2>
+    <div class="tech-container">
+      <div class="tech-slider">
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/html5.svg" alt="HTML" />
+          HTML5
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/css3.svg" alt="CSS" />
+          CSS3
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/javascript.svg"
+            alt="JS"
+          />
+          JavaScript
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nodedotjs.svg"
+            alt="Node"
+          />
+          Node.js
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/php.svg" alt="PHP" /> PHP
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/jquery.svg"
+            alt="jQuery"
+          />
+          jQuery
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/express.svg"
+            alt="Express"
+          />
+          Express.js
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/mongodb.svg"
+            alt="Mongo"
+          />
+          MongoDB
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/wordpress.svg" alt="WP" />
+          WordPress
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/react.svg" alt="React" />
+          React
+        </div>
+        <div class="tech-slide">
+          <img src="../assets/vuejs.png" alt="Vue" />
+          Vue.js
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nextdotjs.svg"
+            alt="Next"
+          />
+          Next.js
+        </div>
+        <!-- Duplicates for continuous scroll -->
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/html5.svg" alt="HTML" />
+          HTML5
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/css3.svg" alt="CSS" />
+          CSS3
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/javascript.svg"
+            alt="JS"
+          />
+          JavaScript
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nodedotjs.svg"
+            alt="Node"
+          />
+          Node.js
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/php.svg" alt="PHP" /> PHP
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/jquery.svg"
+            alt="jQuery"
+          />
+          jQuery
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/express.svg"
+            alt="Express"
+          />
+          Express.js
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/mongodb.svg"
+            alt="Mongo"
+          />
+          MongoDB
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/wordpress.svg" alt="WP" />
+          WordPress
+        </div>
+        <div class="tech-slide">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/react.svg" alt="React" />
+          React
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/vue-dot-js.svg"
+            alt="Vue"
+          />
+          Vue.js
+        </div>
+        <div class="tech-slide">
+          <img
+            src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nextdotjs.svg"
+            alt="Next"
+          />
+          Next.js
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="contact-us">
+    <div class="contact-info">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you!</p>
+      <ul>
+        <li>Phone: <a href="tel:+92 333 3515910">+92 333 3515910</a></li>
+        <li>Email: <a href="mailto:dtc@gmail.com">dtc@gmail.com</a></li>
+        <li>DHA Karachi, Sindh, Pakistan</li>
+      </ul>
+      <form @submit.prevent="validateForm">
+        <input type="text" placeholder="Your Name" v-model="form.name" required />
+        <input type="email" placeholder="Your Email" v-model="form.email" required />
+        <textarea placeholder="Your Message" v-model="form.message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+    <div class="contact-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=YOUR_MAP_LINK"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg" alt="WhatsApp" />
+  </a> -->
 </template>
 
 <script>
@@ -72,6 +261,38 @@ export default {
           image: 'src/assets/CCTV.jpg',
         },
       ],
+      services: [
+        {
+          title: 'Website Development',
+          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/codepen.svg',
+        },
+        {
+          title: 'Web Application Development',
+          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/react.svg',
+        },
+        {
+          title: 'Digital Marketing and SEO',
+          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/googleanalytics.svg',
+        },
+        { title: 'CCTV Installation and Maintenance', icon: '../assets/cctv-camera.png' },
+        {
+          title: 'Web Hosting',
+          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/cloudflare.svg',
+        },
+        {
+          title: 'Graphic Designing',
+          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/adobeillustrator.svg',
+        },
+        {
+          title: 'Other IT Services',
+          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/git.svg',
+        },
+      ],
+      form: {
+        name: '',
+        email: '',
+        message: '',
+      },
     }
   },
   methods: {
@@ -80,6 +301,13 @@ export default {
     },
     prevSlide() {
       this.currentIndex = (this.currentIndex - 1 + this.items.length) % this.items.length
+    },
+    validateForm() {
+      if (this.form.name && this.form.email && this.form.message) {
+        alert('Form submitted successfully!')
+      } else {
+        alert('Please fill out all fields.')
+      }
     },
   },
   mounted() {
@@ -95,9 +323,9 @@ export default {
   position: relative;
   max-width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: white; /* Revert to original background color */
   overflow: hidden;
-  color: black;
+  color: black; /* Revert to original text color */
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -108,7 +336,7 @@ export default {
 
 .carousel {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 1s ease-in-out;
   width: 100%;
 }
 
@@ -117,6 +345,18 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .item-content {
@@ -148,59 +388,359 @@ img {
   height: auto;
   margin-left: 20px;
 }
-/* homepage about us css */
+
+/* About Section */
 .about {
-  padding-left: 10px;
+  padding: 20px;
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  background-color: skyblue; /* Revert to original background color */
+  flex-wrap: wrap;
+  gap: 20px;
+  color: black; /* Revert to original text color */
+}
+
+.content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.points div {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+}
+
+.content h4 {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.content a {
+  display: block;
+  margin: 10px 0;
+  color: #000;
+  text-decoration: none;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
   width: 100%;
+  max-width: 200px;
+  margin: 10px auto;
+  display: block;
+}
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-image img {
-  flex: 1;
-  max-width: 20rem;
-  height: 20rem;
-
-  margin-right: 10px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
-.btn {
-  margin-top: 5px;
-  background-color: black;
+
+/* Message Section */
+.message {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.message h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.message h1 {
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
+
+/* Services Section */
+.special {
+  padding: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.service-item {
+  padding: 20px;
+  background: skyblue; /* Revert to original background color */
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  color: black; /* Revert to original text color */
+  animation: slideUp 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-item img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Tech Section */
+.tech {
+  /* padding: 20px 0; */
+  overflow: hidden;
+  background: #fff;
+}
+
+.tech h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 4em;
+}
+
+.tech-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.tech-slider {
+  display: flex;
+  width: calc(220px * 24);
+  animation: slide 25s linear infinite;
+}
+
+.tech-slide {
+  flex: 0 0 220px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: skyblue; /* Revert to original background color */
+  margin: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #444; /* Revert to original text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tech-slide img {
+  width: 35px;
+  height: 45px;
+  margin-right: 15px;
+}
+
+.tech-slider:hover {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-220px * 12));
+  }
+}
+
+/* Contact Section */
+.contact-us {
+  display: flex;
+  /* flex-direction: row--; */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-map {
+  width: 50%;
+  min-width: 300px;
+}
+
+.contact-info {
+  padding-right: 20px;
+}
+
+.contact-info h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.contact-info form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info input,
+.contact-info textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 1em;
+}
+
+.contact-info button {
+  padding: 10px;
+  background-color: #007bff;
   color: white;
-  padding: 0.5rem 1rem;
   border: none;
-  width: 10rem;
-  height: 3rem;
-  border-radius: 5px;
   cursor: pointer;
 }
-.btn:hover {
-  background-color: none;
-  color: white;
-}
-p {
-  margin-top: 5px;
-  font-size: 1rem;
-}
-/* Mobile responsiveness */
+
+/* Responsive Design */
 @media (max-width: 768px) {
+  .carousel-container {
+    height: auto;
+    padding: 10px;
+  }
+
   .item-content {
     flex-direction: column;
     text-align: center;
+    padding: 20px; /* Adjust padding for mobile view */
   }
 
-  img {
-    max-width: 80%;
-    margin-left: 0;
-    margin-top: 20px;
+  .text-content {
+    margin-bottom: 20px; /* Add margin for spacing */
+  }
+
+  .carousel img {
+    max-width: 60%;
+    padding-right: 6px;
+    /* margin: 20px 0 0 0; */
   }
 
   h3 {
     font-size: 32px;
   }
 
-  p {
+  .carousel p {
     font-size: 20px;
+  }
+
+  .about {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .points {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .points div {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .content h4 {
+    font-size: 1.1rem;
+  }
+
+  .message h2 {
+    font-size: 1.5rem;
+  }
+
+  .message h1 {
+    font-size: 1.3rem;
+  }
+  .about-image {
+    /* padding-right: 10px; */
+    width: 100%;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-slide {
+    flex: 0 0 180px;
+    height: 100px;
+  }
+
+  .tech-slider {
+    width: calc(180px * 24);
+  }
+
+  @keyframes slide {
+    100% {
+      transform: translateX(calc(-180px * 12));
+    }
+  }
+
+  .contact-us {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-info,
+  .contact-map {
+    width: 100%;
   }
 }
 
@@ -209,8 +749,78 @@ p {
     font-size: 28px;
   }
 
-  p {
+  .carousel p {
     font-size: 18px;
   }
+
+  .content h1 {
+    font-size: 1.8rem;
+  }
+
+  .content p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+  }
+
+  .message h2 {
+    font-size: 1.2rem;
+  }
+
+  .message h1 {
+    font-size: 1.1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #20b358;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 </style>

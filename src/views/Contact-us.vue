@@ -1,23 +1,33 @@
 <template>
-  <h1>Contact Us</h1>
-  <div class="contact">
-    <form @submit.prevent="handleSubmit">
-      <input type="text" v-model="name" placeholder="Your Name" required />
-      <input type="email" v-model="email" placeholder="Your Email" required />
-      <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <div class="p">
-      <p class="p1">
-        <a href="digitaltransformationcompany@gmail.com"
-          ><strong>Email Us: </strong>Digital Transformation Company</a
-        >
-      </p>
-      <p class="p2">
-        <a href="tel:+92 333 3515910"><strong>Contact Us: </strong>+92 333 3515910</a>
-      </p>
+  <section class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-container">
+      <form @submit.prevent="handleSubmit" class="contact-form">
+        <input type="text" v-model="name" placeholder="Your Name" required />
+        <input type="email" v-model="email" placeholder="Your Email" required />
+        <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <div class="info-item">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/gmail.svg" alt="Email" />
+          <p>
+            <strong>Email Us:</strong>
+            <a href="mailto:digitaltransformationcompany@gmail.com"
+              >Digital Transformation Company</a
+            >
+          </p>
+        </div>
+        <div class="info-item">
+          <img src="../assets/telephone.png" alt="Phone" />
+          <p><strong>Contact Us:</strong> <a href="tel:+92 333 3515910">+92 333 3515910</a></p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+  <a href="https://wa.me/+923333515910" class="whatsapp-float" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
 </template>
 
 <script>
@@ -64,86 +74,177 @@ export default {
 </script>
 
 <style scoped>
-.contact {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: right;
-  justify-content: center;
+.contact-section {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  color: #333;
   text-align: center;
-  min-height: 50vh;
-  background-color: white;
-  color: white;
-  font-family: Arial, sans-serif;
-  padding: 20px;
 }
-.p {
+
+.contact-section h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  padding-bottom: 0.5rem;
+}
+
+.contact-container {
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  padding-right: 20px;
-  border: #777777;
-}
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: black;
   align-items: center;
-  position: center;
+  justify-content: center;
+  gap: 2rem;
 }
 
-form {
+.contact-form {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-form input,
-form textarea,
-form button {
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
   font-size: 1rem;
 }
 
-form input,
-form textarea {
-  background-color: white;
-  color: black;
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #777;
 }
 
-form input::placeholder,
-form textarea::placeholder {
-  color: #777777;
-}
-
-form button {
-  background-color: black;
-  color: #ffffff;
+.contact-form button {
+  background-color: #333;
+  color: white;
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-form button:hover {
-  background-color: wheat;
-  color: black;
+.contact-form button:hover {
+  background-color: #555;
 }
 
-a {
-  color: black;
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-item img {
+  width: 40px;
+  height: 40px;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.info-item a {
+  color: #007bff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: blue;
+.info-item a:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-form {
+    padding: 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    padding: 0.8rem;
+  }
+
+  .info-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-item img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .info-item p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form {
+    padding: 0.5rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form button {
+    padding: 0.6rem;
+  }
+
+  .info-item img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .info-item p {
+    font-size: 0.8rem;
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 1000;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 </style>

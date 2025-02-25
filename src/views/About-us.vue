@@ -25,14 +25,14 @@
         </p>
       </div>
       <div class="about-image">
-        <img src="/home/ali-abdullah/Desktop/Projects/CTS/CTS/src/assets/th (1).jpeg" alt="" />
-        <img
-          src="/home/ali-abdullah/Desktop/Projects/CTS/CTS/src/assets/th.jpeg"
-          alt="Our Team at Work"
-        />
+        <img src="@/assets/th (1).jpeg" alt="Team Image 1" class="about-image1" />
+        <img src="@/assets/th.jpeg" alt="Our Team at Work" class="about-image2" />
       </div>
     </section>
   </div>
+  <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+    <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg" alt="WhatsApp" />
+  </a>
 </template>
 
 <script setup>
@@ -42,8 +42,9 @@
 <style scoped>
 .about-page {
   padding: 2rem;
-  background-color: white;
-  color: black;
+  background-color: #f9f9f9;
+  color: #333;
+  font-family: 'Arial', sans-serif;
 }
 
 .about-section {
@@ -51,6 +52,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
+  margin-top: 2rem;
 }
 
 .about-text {
@@ -61,35 +63,74 @@
 .about-text h2 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: black;
+  color: #333;
+  font-weight: bold;
 }
 
 .about-text p {
   font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  color: #555;
 }
 
 .about-image {
   flex: 1;
   max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .about-image img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 15px black;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  background-color: #20b358;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 @media (max-width: 768px) {
   .about-section {
-    flex-direction: column;
+    flex-direction: column-reverse;
     text-align: center;
   }
-
+  .about-image2 {
+    display: none;
+  }
   .about-image img {
-    max-width: 80%;
+    max-width: 100%;
+    padding: none;
   }
 }
 </style>
