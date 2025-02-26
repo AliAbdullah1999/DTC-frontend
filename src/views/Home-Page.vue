@@ -29,22 +29,12 @@
         providing top-notch solutions that help you grow your business and reach your goals.
       </p>
       <div class="points">
-        <div class="point-item">
-          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
-          <strong>24/7 Support</strong>
-        </div>
-        <div class="point-item">
-          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
-          <strong>Professional Staff</strong>
-        </div>
-        <div class="point-item">
-          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
-          <strong>Fair Prices</strong>
-        </div>
-        <div class="point-item">
-          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
-          <strong>Quality Services</strong>
-        </div>
+        <ul class="points">
+          <li class="point-item">24/7 Support</li>
+          <li class="point-item">Professional Staff</li>
+          <li class="point-item">Fair Prices</li>
+          <li class="point-item">Quality Services</li>
+        </ul>
       </div>
       <h4>Call us to ask any question</h4>
       <a href="tel:+92 333 3515910">+92 333-3515910</a>
@@ -244,7 +234,7 @@ export default {
         {
           title: 'Digital Marketing',
           description: `Elevating your brand's presence with data-driven strategies and creative campaigns. We specialize in connecting you with your audience through targeted advertising, SEO, social media management, and content marketing. Let us help you drive engagement, increase conversions, and achieve measurable growth in the digital space.`,
-          image: 'src/assets/DM1.jpg',
+          image: 'src/assets/DM1.png',
         },
         {
           title: 'CCTV Solutions',
@@ -312,6 +302,7 @@ export default {
 <style scoped>
 .carousel-container {
   position: relative;
+  margin-top: -5rem;
   max-width: 100%;
   height: 100vh;
   background-color: skyblue; /* Revert to original background color */
@@ -407,17 +398,18 @@ img {
 }
 
 .points {
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   gap: 15px;
+  padding-left: 10px;
   justify-content: left;
 }
 
 .point-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  flex: 1;
+  /* display: flex; */
+  align-items: left;
+  padding-left: 10px;
+  /* flex: 1; */
   min-width: 120px;
   text-align: left;
 }
@@ -710,7 +702,10 @@ img {
   .message h2 {
     font-size: 1.5rem;
   }
-
+  .point-item .tick {
+    width: 1rem;
+    height: 1.5rem;
+  }
   .message h1 {
     font-size: 1.3rem;
   }
