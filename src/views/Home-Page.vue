@@ -224,12 +224,12 @@ export default {
         {
           title: 'IT Services',
           description: `Your reliable IT partner, dedicated to providing comprehensive solutions tailored to meet your unique needs. We specialize in delivering top-notch IT services that ensure efficiency, security, and seamless integration for businesses of all sizes. Whether it's optimizing your systems, enhancing your digital presence, or providing ongoing technical support, we are here to empower your success with innovative and reliable solutions.`,
-          image: 'src/assets/IT-Services.jpg',
+          image: 'src/assets/IT-Services1.png',
         },
         {
           title: 'Web Solutions',
           description: `Delivering innovative web development solutions designed to bring your ideas to life. From crafting visually stunning websites to building dynamic and responsive applications, we specialize in creating online experiences that captivate users and drive business growth. Let us transform your vision into a digital reality with our cutting-edge web solutions.`,
-          image: 'src/assets/web.jpg',
+          image: 'src/assets/web1.png',
         },
         {
           title: 'Digital Marketing',
@@ -239,7 +239,7 @@ export default {
         {
           title: 'CCTV Solutions',
           description: `Ensuring your safety with high-quality CCTV security systems designed to protect what matters most. Our advanced surveillance solutions provide reliable monitoring, clear visuals, and seamless integration for homes and businesses. Trust us to deliver customized security systems that give you peace of mind and round-the-clock protection.`,
-          image: 'src/assets/CCTV.jpg',
+          image: 'src/assets/CCTV1.png',
         },
       ],
       services: [
