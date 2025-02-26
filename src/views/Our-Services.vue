@@ -50,7 +50,7 @@ const services = [
   {
     title: 'CCTV Installation',
     description: 'Secure your premises with our advanced CCTV systems.',
-    icon: 'src/assets/CCTV.jpg',
+    icon: 'src/assets/cctv-camera.png',
   },
 ]
 </script>
@@ -90,6 +90,7 @@ const services = [
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  animation: fadeInUp 0.5s ease-in-out;
 }
 
 .card .icon {
@@ -119,11 +120,34 @@ const services = [
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   background-color: #333;
+  animation: hoverEffect 0.3s ease-in-out;
 }
 
 .card:hover h2,
 .card:hover p {
   color: white;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hoverEffect {
+  from {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
 }
 
 @media (max-width: 768px) {

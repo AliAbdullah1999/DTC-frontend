@@ -102,6 +102,7 @@ header {
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  justify-content: space-between; /* Ensure header elements are spaced between */
 }
 
 header.scrolled {
@@ -126,6 +127,7 @@ header.scrolled {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 1rem; /* Adjust margin to align with other elements */
 }
 .btn:hover {
   background-color: none;
@@ -153,14 +155,15 @@ nav {
   justify-content: flex-end;
   align-items: center;
   height: 100%;
-  padding-left: 12rem;
+  padding-left: 0; /* Remove left padding */
 }
 
 .menu {
   display: flex;
-  gap: 6rem;
+  gap: 3rem; /* Reduce gap to decrease space between elements */
   /* position: flex-end; */
   list-style: none;
+  margin-left: auto; /* Align menu to the right */
 }
 
 .menu li {
@@ -215,7 +218,7 @@ nav {
     padding-left: 0;
   }
   .logo img {
-    width: 120px;
+    width: 100px;
   }
   .menu {
     display: none;

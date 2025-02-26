@@ -1,7 +1,7 @@
 <template>
   <div class="about-page">
     <section class="about-section">
-      <div class="about-text">
+      <div class="about-text animate-text">
         <h2>About Us</h2>
         <p>
           At Digital Transformation Company (DTC), we specialize in helping businesses thrive in the
@@ -24,7 +24,7 @@
           potential of your business.
         </p>
       </div>
-      <div class="about-image">
+      <div class="about-image animate-image">
         <img src="@/assets/th (1).jpeg" alt="Team Image 1" class="about-image1" />
         <img src="@/assets/th.jpeg" alt="Our Team at Work" class="about-image2" />
       </div>
@@ -118,6 +118,25 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+.animate-text {
+  animation: fadeIn 2s ease-in-out;
+}
+
+.animate-image {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {

@@ -3,7 +3,7 @@
     <div class="footer-content">
       <div class="footer-section company-info">
         <p>&copy; 2024 Digital Transformation Company. All Rights Reserved.</p>
-        <p>Dha, Phase 2, Karachi, Sindh, Karachi</p>
+        <p>Dha, Phase 2, Karachi, Sindh, Pakistan</p>
         <p>Email: dtc@gmail.com</p>
       </div>
       <div class="footer-section quick-links">
@@ -69,15 +69,23 @@ footer {
   color: black;
   text-decoration: none;
   margin: 0 0.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-link:hover {
   text-decoration: underline;
+  color: darkblue;
+  transform: scale(1.1);
 }
 
 .footer-link img {
   width: 32px;
   height: 32px;
   margin: 0 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.footer-link img:hover {
+  transform: scale(1.2);
 }
 </style>

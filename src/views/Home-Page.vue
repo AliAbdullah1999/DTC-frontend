@@ -6,6 +6,7 @@
           <div class="text-content">
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
+            <button class="btn" @click="$router.push('/services')">Explore Our Services</button>
           </div>
           <img v-if="item.image" :src="item.image" :alt="item.title" />
         </div>
@@ -28,15 +29,27 @@
         providing top-notch solutions that help you grow your business and reach your goals.
       </p>
       <div class="points">
-        <div><strong>24/7 Support</strong></div>
-        <div><strong>Professional Staff</strong></div>
-        <div><strong>Fair Prices</strong></div>
-        <div><strong>Quality Services</strong></div>
+        <div class="point-item">
+          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
+          <strong>24/7 Support</strong>
+        </div>
+        <div class="point-item">
+          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
+          <strong>Professional Staff</strong>
+        </div>
+        <div class="point-item">
+          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
+          <strong>Fair Prices</strong>
+        </div>
+        <div class="point-item">
+          <img src="../assets/check.png" alt="" style="width: 2rem; height: 2rem" />
+          <strong>Quality Services</strong>
+        </div>
       </div>
       <h4>Call us to ask any question</h4>
       <a href="tel:+92 333 3515910">+92 333-3515910</a>
       <div>
-        <button class="btn" @click="$router.push('/contact')">Request a Quote</button>
+        <button class="btn" @click="$router.push('/about')">Explore More</button>
       </div>
     </div>
     <div class="about-image">
@@ -45,8 +58,8 @@
   </div>
 
   <div class="message">
-    <h2 style="font-size: 64px">Our Services</h2>
-    <h1>We Are Here To Grow Your Business Exponentially</h1>
+    <h2 style="font-size: 50px">Services We Provide</h2>
+    <p>We Are Here To Grow Your Business Exponentially</p>
   </div>
 
   <div class="special">
@@ -59,142 +72,120 @@
   </div>
 
   <div class="tech">
-    <h2>Our Tech Stack</h2>
+    <h2 style="font-size: 50px">Our Tech Stack</h2>
     <div class="tech-container">
       <div class="tech-slider">
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/html5.svg" alt="HTML" />
-          HTML5
         </div>
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/css3.svg" alt="CSS" />
-          CSS3
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/javascript.svg"
             alt="JS"
           />
-          JavaScript
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nodedotjs.svg"
             alt="Node"
           />
-          Node.js
         </div>
         <div class="tech-slide">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/php.svg" alt="PHP" /> PHP
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/php.svg" alt="PHP" />
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/jquery.svg"
             alt="jQuery"
           />
-          jQuery
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/express.svg"
             alt="Express"
           />
-          Express.js
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/mongodb.svg"
             alt="Mongo"
           />
-          MongoDB
         </div>
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/wordpress.svg" alt="WP" />
-          WordPress
         </div>
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/react.svg" alt="React" />
-          React
         </div>
         <div class="tech-slide">
           <img src="../assets/vuejs.png" alt="Vue" />
-          Vue.js
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nextdotjs.svg"
             alt="Next"
           />
-          Next.js
         </div>
         <!-- Duplicates for continuous scroll -->
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/html5.svg" alt="HTML" />
-          HTML5
         </div>
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/css3.svg" alt="CSS" />
-          CSS3
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/javascript.svg"
             alt="JS"
           />
-          JavaScript
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nodedotjs.svg"
             alt="Node"
           />
-          Node.js
         </div>
         <div class="tech-slide">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/php.svg" alt="PHP" /> PHP
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/php.svg" alt="PHP" />
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/jquery.svg"
             alt="jQuery"
           />
-          jQuery
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/express.svg"
             alt="Express"
           />
-          Express.js
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/mongodb.svg"
             alt="Mongo"
           />
-          MongoDB
         </div>
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/wordpress.svg" alt="WP" />
-          WordPress
         </div>
         <div class="tech-slide">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/react.svg" alt="React" />
-          React
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/vue-dot-js.svg"
             alt="Vue"
           />
-          Vue.js
         </div>
         <div class="tech-slide">
           <img
             src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/nextdotjs.svg"
             alt="Next"
           />
-          Next.js
         </div>
       </div>
     </div>
@@ -205,9 +196,9 @@
       <h2>Contact Us</h2>
       <p>We’d love to hear from you!</p>
       <ul>
-        <li>Phone: <a href="tel:+92 333 3515910">+92 333 3515910</a></li>
-        <li>Email: <a href="mailto:dtc@gmail.com">dtc@gmail.com</a></li>
-        <li>DHA Karachi, Sindh, Pakistan</li>
+        <li>Have a question or need assistance?</li>
+        <li>Fill out our quick and secure contact form, and we’ll get back to you ASAP.</li>
+        <li>Let’s connect! 🚀</li>
       </ul>
       <form @submit.prevent="validateForm">
         <input type="text" placeholder="Your Name" v-model="form.name" required />
@@ -253,7 +244,7 @@ export default {
         {
           title: 'Digital Marketing',
           description: `Elevating your brand's presence with data-driven strategies and creative campaigns. We specialize in connecting you with your audience through targeted advertising, SEO, social media management, and content marketing. Let us help you drive engagement, increase conversions, and achieve measurable growth in the digital space.`,
-          image: 'src/assets/DM.jpg',
+          image: 'src/assets/DM1.jpg',
         },
         {
           title: 'CCTV Solutions',
@@ -274,7 +265,7 @@ export default {
           title: 'Digital Marketing and SEO',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/googleanalytics.svg',
         },
-        { title: 'CCTV Installation and Maintenance', icon: '../assets/cctv-camera.png' },
+        { title: 'CCTV Installation and Maintenance', icon: 'src/assets/cctv-camera.png' },
         {
           title: 'Web Hosting',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/cloudflare.svg',
@@ -323,13 +314,13 @@ export default {
   position: relative;
   max-width: 100%;
   height: 100vh;
-  background-color: white; /* Revert to original background color */
+  background-color: skyblue; /* Revert to original background color */
   overflow: hidden;
   color: black; /* Revert to original text color */
   display: flex;
   align-items: center;
-  padding-left: 10px;
-  margin-right: 10px;
+  /* padding-left: 10px; */
+  /* margin-right: 10px; */
   padding-bottom: 10px;
   justify-content: center;
 }
@@ -393,7 +384,7 @@ img {
 .about {
   padding: 20px;
   display: flex;
-  background-color: skyblue; /* Revert to original background color */
+  background-color: transparent !important; /* Revert to original background color */
   flex-wrap: wrap;
   gap: 20px;
   color: black; /* Revert to original text color */
@@ -419,14 +410,16 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin: 20px 0;
-  justify-content: center;
+  justify-content: left;
 }
 
-.points div {
+.point-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   flex: 1;
   min-width: 120px;
-  text-align: center;
+  text-align: left;
 }
 
 .content h4 {
@@ -442,15 +435,20 @@ img {
 }
 
 .btn {
-  background-color: black;
-  color: white;
+  background-color: skyblue;
+  color: black;
+  margin-top: 1rem;
   padding: 0.8rem 1.5rem;
   border: none;
+  align-items: left;
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  font-size: 1rem;
+  /* border-color: black; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
   max-width: 200px;
-  margin: 10px auto;
+  /* margin: 10px auto; */
   display: block;
 }
 
@@ -565,7 +563,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: skyblue; /* Revert to original background color */
+  background: transparent !important; /* Revert to original background color */
   margin: 10px;
   border-radius: 10px;
   font-weight: 600;
@@ -640,6 +638,7 @@ img {
   padding: 10px;
   background-color: #007bff;
   color: white;
+  width: 15rem;
   border: none;
   cursor: pointer;
 }
@@ -648,6 +647,7 @@ img {
 @media (max-width: 768px) {
   .carousel-container {
     height: auto;
+    align-items: center;
     padding: 10px;
   }
 
@@ -663,8 +663,8 @@ img {
 
   .carousel img {
     max-width: 60%;
-    padding-right: 6px;
-    /* margin: 20px 0 0 0; */
+    padding-right: 0px;
+    margin: 20px 0 0 0;
   }
 
   h3 {
@@ -674,7 +674,11 @@ img {
   .carousel p {
     font-size: 20px;
   }
-
+  .btn {
+    /* padding: 0.6rem 1rem; */
+    align-items: center;
+    padding-left: 15px;
+  }
   .about {
     flex-direction: column;
     padding: 15px;
@@ -741,6 +745,7 @@ img {
   .contact-info,
   .contact-map {
     width: 100%;
+    padding: 5px;
   }
 }
 

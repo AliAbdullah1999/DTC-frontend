@@ -2,14 +2,14 @@
   <section class="contact-section">
     <h1>Contact Us</h1>
     <div class="contact-container">
-      <form @submit.prevent="handleSubmit" class="contact-form">
+      <form @submit.prevent="handleSubmit" class="contact-form animate-form">
         <input type="text" v-model="name" placeholder="Your Name" required />
         <input type="email" v-model="email" placeholder="Your Email" required />
         <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
       <div class="contact-info">
-        <div class="info-item">
+        <div class="info-item animate-info">
           <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/gmail.svg" alt="Email" />
           <p>
             <strong>Email Us:</strong>
@@ -18,7 +18,7 @@
             >
           </p>
         </div>
-        <div class="info-item">
+        <div class="info-item animate-info">
           <img src="../assets/telephone.png" alt="Phone" />
           <p><strong>Contact Us:</strong> <a href="tel:+92 333 3515910">+92 333 3515910</a></p>
         </div>
@@ -246,5 +246,29 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-form {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.animate-info {
+  animation: fadeIn 1s ease-in-out;
+  animation-delay: 0.5s;
+}
+
+.contact-info .animate-info:nth-child(2) {
+  animation-delay: 1s;
 }
 </style>
