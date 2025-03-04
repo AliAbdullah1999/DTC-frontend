@@ -1,4 +1,7 @@
 <template>
+  <!-- <div class="banner">
+    <h1>Welcome to the Digital Transformation Company</h1>
+  </div> -->
   <div class="carousel-container">
     <div class="carousel" :style="{ transform: `translateX(-${currentIndex * 100}%)` }">
       <div class="carousel-item" v-for="(item, index) in items" :key="index">
@@ -209,9 +212,14 @@
     </div>
   </section>
 
-  <!-- <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
-    <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg" alt="WhatsApp" />
-  </a> -->
+  <section class="whatsapp-section">
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+      <img
+        src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg"
+        alt="WhatsApp"
+      />
+    </a>
+  </section>
 </template>
 
 <script>
@@ -300,11 +308,25 @@ export default {
 </script>
 
 <style scoped>
+/* .banner {
+  background-color: skyblue;
+  padding: 5rem;
+  height: 15rem;
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin: 0;
+} */
+
 .carousel-container {
   position: relative;
   margin-top: -5rem;
   max-width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-color: skyblue; /* Revert to original background color */
   overflow: hidden;
   color: black; /* Revert to original text color */
@@ -442,6 +464,8 @@ img {
   max-width: 200px;
   /* margin: 10px auto; */
   display: block;
+  align-content: center;
+  align-items: center;
 }
 
 .about-image {
@@ -670,6 +694,7 @@ img {
     /* padding: 0.6rem 1rem; */
     align-items: center;
     padding-left: 15px;
+    margin-top: 20px; /* Add margin to separate from the image */
   }
   .about {
     flex-direction: column;
@@ -798,20 +823,27 @@ img {
   right: 10px;
 }
 
+.whatsapp-section {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 20px;
+}
+
 .whatsapp-float {
-  position: fixed;
   width: 60px;
   height: 60px;
-  bottom: 40px;
-  right: 40px;
   background-color: #25d366;
   color: #fff;
-  border-radius: 50px;
+  border-radius: 50%;
   text-align: center;
   font-size: 30px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
   transition: background-color 0.3s ease;
+  border: 3px solid black; /* Black border */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .whatsapp-float:hover {
@@ -819,8 +851,9 @@ img {
 }
 
 .whatsapp-float img {
-  width: 100%;
-  height: 100%;
+  width: 90%; /* Make the logo larger inside */
+  height: 90%;
+  object-fit: contain; /* Ensures proper fitting */
   border-radius: 50%;
 }
 </style>

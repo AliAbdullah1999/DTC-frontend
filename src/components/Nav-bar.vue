@@ -61,20 +61,20 @@ const toggleMenu = () => {
     console.error('Menu element not found')
   }
 }
-import { onMounted, ref } from 'vue'
+// import { onMounted, ref } from 'vue'
 
-const headerRef = ref(null)
+// const headerRef = ref(null)
 
-onMounted(() => {
-  window.addEventListener('scroll', () => {
-    const header = headerRef.value || document.querySelector('header')
-    if (window.scrollY > 50) {
-      header.classList.add('scrolled')
-    } else {
-      header.classList.remove('scrolled')
-    }
-  })
-})
+// onMounted(() => {
+//   window.addEventListener('scroll', () => {
+//     const header = headerRef.value || document.querySelector('header')
+//     if (window.scrollY > 50) {
+//       header.classList.add('scrolled')
+//     } else {
+//       header.classList.remove('scrolled')
+//     }
+//   })
+// })
 
 const closeMenu = () => {
   const menu = document.querySelector('.menu')

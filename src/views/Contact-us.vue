@@ -1,31 +1,62 @@
 <template>
-  <section class="contact-section">
+  <div class="banner">
     <h1>Contact Us</h1>
+  </div>
+  <section class="contact-section">
     <div class="contact-container">
+      <div class="contact-description">
+        <h3><strong>Get in Touch</strong></h3>
+        <p>
+          We’re here to help with all your inquiries, whether you need web development services, IT
+          solutions, or expert advice. Feel free to reach out to us via phone, email, or WhatsApp,
+          and our team will respond as soon as possible. Your satisfaction is our priority, and
+          we’re committed to providing prompt and efficient support.
+        </p>
+        <h3><strong>Contact Us</strong></h3>
+        <p>
+          You can contact us anytime for project discussions, collaborations, or general queries.
+          Whether you prefer an in-person meeting or an online consultation, we’re always available
+          to assist you. Use the form below or connect with us through our provided contact details.
+        </p>
+        <div class="contact-info">
+          <div class="info-item animate-info">
+            <img
+              src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/gmail.svg"
+              alt="Email"
+            />
+            <p>
+              <strong>Email Us:</strong>
+              <a href="mailto:digitaltransformationcompany@gmail.com"
+                >Digital Transformation Company</a
+              >
+            </p>
+          </div>
+          <div class="info-item animate-info">
+            <img src="../assets/telephone.png" alt="Phone" />
+            <p><strong>Contact Us:</strong> <a href="tel:+92 333 3515910">+92 333 3515910</a></p>
+          </div>
+        </div>
+      </div>
+
       <form @submit.prevent="handleSubmit" class="contact-form animate-form">
         <input type="text" v-model="name" placeholder="Your Name" required />
         <input type="email" v-model="email" placeholder="Your Email" required />
         <textarea v-model="message" placeholder="Your Message" rows="5" required></textarea>
         <button type="submit">Send Message</button>
       </form>
-      <div class="contact-info">
-        <div class="info-item animate-info">
-          <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/gmail.svg" alt="Email" />
-          <p>
-            <strong>Email Us:</strong>
-            <a href="mailto:digitaltransformationcompany@gmail.com"
-              >Digital Transformation Company</a
-            >
-          </p>
-        </div>
-        <div class="info-item animate-info">
-          <img src="../assets/telephone.png" alt="Phone" />
-          <p><strong>Contact Us:</strong> <a href="tel:+92 333 3515910">+92 333 3515910</a></p>
-        </div>
-      </div>
     </div>
   </section>
-  <a href="https://wa.me/+923333515910" class="whatsapp-float" target="_blank">
+  <div id="map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.104740071888!2d67.0576612!3d24.8043485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33cf02eda6f15%3A0x937892677f0377a2!2sDefence%20Housing%20Authority%2C%20Karachi%2C%2075500%2C%20Pakistan!5e0!3m2!1sen!2s!4v1633021234567!5m2!1sen!2s"
+      width="100%"
+      height="100%"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
+  <a href="https://wa.me/923333515910" class="whatsapp-float" target="_blank">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg" alt="WhatsApp" />
   </a>
 </template>
@@ -74,6 +105,20 @@ export default {
 </script>
 
 <style scoped>
+.banner {
+  background-color: skyblue;
+  padding: 5rem;
+  height: 15rem;
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
 .contact-section {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -94,16 +139,31 @@ export default {
 
 .contact-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact-description,
+.contact-form {
+  flex: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
+.contact-description {
+  padding: 2rem;
+  font-size: 1.1rem;
+
+  text-align: left;
 }
 
 .contact-form {
   width: 100%;
   max-width: 500px;
-  background-color: white;
+  height: 32rem;
+  background-color: transparent !important;
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -113,8 +173,9 @@ export default {
 .contact-form textarea,
 .contact-form button {
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
   margin-bottom: 1rem;
+  border-radius: 30px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
@@ -130,6 +191,7 @@ export default {
   color: white;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 30px;
   transition: background-color 0.3s ease;
 }
 
@@ -140,13 +202,14 @@ export default {
 .contact-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   gap: 1rem;
+  padding-top: 1rem;
 }
 
 .info-item {
   display: flex;
-  align-items: center;
+  align-items: left;
   gap: 1rem;
   background-color: white;
   padding: 1rem;
@@ -175,10 +238,21 @@ export default {
   color: #0056b3;
 }
 
+#map {
+  height: 30vh;
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
+  }
+
+  .contact-description {
+    /* padding: 1rem; */
+    text-align: center;
   }
 
   .contact-form {
@@ -207,6 +281,10 @@ export default {
 }
 
 @media (max-width: 480px) {
+  .contact-description {
+    padding: 0.5rem;
+  }
+
   .contact-form {
     padding: 0.5rem;
   }

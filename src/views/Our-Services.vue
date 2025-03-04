@@ -1,6 +1,9 @@
 <template>
-  <section class="services">
+  <div class="banner">
     <h1>Our Services</h1>
+  </div>
+  <section class="services">
+    <!-- <h1>Our Services</h1> -->
     <div class="card-container">
       <div class="card" v-for="(service, index) in services" :key="index">
         <div class="icon">
@@ -15,6 +18,7 @@
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg" alt="WhatsApp" />
   </a>
 </template>
+
 <script setup>
 const services = [
   {
@@ -54,24 +58,28 @@ const services = [
   },
 ]
 </script>
+
 <style scoped>
+.banner {
+  background-color: skyblue;
+  padding: 5rem;
+  height: 15rem;
+  text-align: center;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.banner h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
 .services {
   text-align: center;
   align-items: center;
   padding: 2rem 2rem;
   background-color: #f9f9f9;
   color: #333;
-}
-
-.services h1 {
-  font-size: 3rem;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 2rem;
-  border-bottom: 2px solid #333;
-  display: inline-block;
-  padding-bottom: 0.5rem;
 }
 
 .card-container {
@@ -119,7 +127,7 @@ const services = [
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  background-color: #333;
+  background-color: skyblue;
   animation: hoverEffect 0.3s ease-in-out;
 }
 
@@ -152,22 +160,22 @@ const services = [
 
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    grid-template-columns: 1fr;
     gap: 1rem;
     padding-right: 1rem;
   }
 
   .card {
-    padding: 1rem; /* Reduce padding for smaller screens */
-    border: 1px solid #ddd; /* Adjust border size */
+    padding: 1rem;
+    border: 1px solid #ddd;
   }
 
   .card h2 {
-    font-size: 1.5rem; /* Smaller heading font size */
+    font-size: 1.5rem;
   }
 
   .card p {
-    font-size: 0.9rem; /* Smaller paragraph font size */
+    font-size: 0.9rem;
   }
 }
 
@@ -179,7 +187,7 @@ const services = [
 
   .card {
     padding: 0.8rem;
-    border-radius: 10px; /* Smaller border radius */
+    border-radius: 10px;
   }
 
   .card h2 {
