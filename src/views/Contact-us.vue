@@ -187,16 +187,25 @@ export default {
 }
 
 .contact-form button {
-  background-color: #333;
+  background-color: #2575fc;
   color: white;
   font-weight: bold;
   cursor: pointer;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form button:hover {
-  background-color: #555;
+  background-color: #1a5bb8;
+  transform: translateY(-2px);
+}
+
+.contact-form button:active {
+  background-color: #144a8c;
+  transform: translateY(0);
 }
 
 .contact-info {

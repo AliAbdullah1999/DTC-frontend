@@ -340,9 +340,9 @@ export default {
 
 .carousel-container {
   position: relative;
-  margin-top: -5rem;
+  /* margin-top: -5rem; */
   max-width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-color: skyblue; /* Revert to original background color */
   overflow: hidden;
   color: black; /* Revert to original text color */
@@ -465,23 +465,26 @@ img {
 }
 
 .btn {
-  background-color: skyblue;
-  color: black;
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
+  background-color: #2575fc;
+  color: white;
+  padding: 1rem 1.5rem;
   border: none;
-  align-items: left;
+  margin-top: 10px;
   border-radius: 5px;
   cursor: pointer;
-  width: 100%;
   font-size: 1rem;
-  /* border-color: black; */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 1);
-  max-width: 200px;
-  /* margin: 10px auto; */
-  display: block;
-  align-content: center;
-  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #1a5bb8;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background-color: #144a8c;
+  transform: translateY(0);
 }
 
 .about-image {

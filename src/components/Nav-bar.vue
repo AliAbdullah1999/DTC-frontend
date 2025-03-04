@@ -1,7 +1,9 @@
 <template>
   <header ref="headerRef">
     <div class="logo">
-      <img src="../assets/logo-f.jpeg" alt="Company Logo" />
+      <RouterLink to="/">
+        <img src="../assets/logo-f.png" alt="Company Logo" />
+      </RouterLink>
     </div>
     <nav>
       <ul class="menu">

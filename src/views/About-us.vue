@@ -393,4 +393,26 @@ const items = ref([
     margin-bottom: 20px;
   }
 }
+
+.btn {
+  background-color: #2575fc;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #1a5bb8;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  background-color: #144a8c;
+  transform: translateY(0);
+}
 </style>

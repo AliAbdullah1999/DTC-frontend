@@ -5,8 +5,8 @@
         <p>&copy; 2025 Digital Transformation Company.</p>
         <p>All Rights Reserved.</p>
         <p>Dha, Phase 2, Karachi, Sindh, Pakistan</p>
-        <p>Email: <a href="dtc@gmail.com">dtc@gmail.com</a></p>
-        <p>Phone: <a href="tel:+92 333 3515910">0333-3515910</a></p>
+        <p>Email: <a href="dtc@gmail.com" style="color: black">dtc@gmail.com</a></p>
+        <p>Phone: <a href="tel:+92 333 3515910" style="color: black">0333-3515910</a></p>
       </div>
       <div class="footer-section quick-links">
         <h3>Quick Links</h3>
@@ -19,7 +19,6 @@
         </nav>
       </div>
       <div class="footer-section social-media">
-        <h3>Our Social Media</h3>
         <a href="https://facebook.com" class="footer-link">
           <img src="../assets/facebook.png" alt="Facebook" />
         </a>
@@ -97,19 +96,28 @@ footer {
   transform: scale(1.2);
 }
 
-.contact-button {
-  background-color: #ffdd57;
-  color: black;
+.contact-button,
+.subscribe-button {
+  background-color: #2575fc;
+  color: white;
   border-radius: 20px;
   width: 8rem;
   height: 2rem;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact-button:hover {
-  background-color: #ffc107;
+.contact-button:hover,
+.subscribe-button:hover {
+  background-color: #1a5bb8;
+  transform: translateY(-2px);
+}
+
+.contact-button:active,
+.subscribe-button:active {
+  background-color: #144a8c;
+  transform: translateY(0);
 }
 
 .subscribe {
@@ -128,21 +136,6 @@ footer {
   max-width: 300px;
 }
 
-.subscribe-button {
-  background-color: #ffdd57;
-  color: black;
-  border-radius: 20px;
-  width: 8rem;
-  height: 2rem;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.subscribe-button:hover {
-  background-color: #ffc107;
-}
-
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -155,6 +148,7 @@ footer {
   }
   .social-media {
     display: flex;
+    align-items: center;
     flex-direction: row;
   }
   .footer-link {
