@@ -326,7 +326,7 @@ export default {
   position: relative;
   margin-top: -5rem;
   max-width: 100%;
-  height: 70vh;
+  height: 90vh;
   background-color: skyblue; /* Revert to original background color */
   overflow: hidden;
   color: black; /* Revert to original text color */
@@ -507,6 +507,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  cursor: pointer;
   padding: 20px;
 }
 
@@ -544,7 +545,10 @@ img {
 }
 
 .service-item:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
+  background-color: darkblue !important;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 /* Tech Section */
