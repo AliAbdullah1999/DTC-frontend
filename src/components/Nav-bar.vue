@@ -1,10 +1,7 @@
 <template>
   <header ref="headerRef">
     <div class="logo">
-      <img
-        src="/home/ali-abdullah/Desktop/Projects/CTS/CTS/src/assets/t_black_logo.png"
-        alt="Company Logo"
-      />
+      <img src="../assets/logo-f.jpeg" alt="Company Logo" />
     </div>
     <nav>
       <ul class="menu">
@@ -95,20 +92,28 @@ header {
   display: flex;
   align-items: center;
   height: 100px;
-  background-color: skyblue;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 121, 113, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   box-shadow: 0px 4px 8px rgba(8, 0, 0, 0.1);
-  /* border-radius: 30px; */
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
-  justify-content: space-between; /* Ensure header elements are spaced between */
+  justify-content: space-between;
 }
 
 header.scrolled {
-  background-color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 121, 113, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
   backdrop-filter: blur(0.5px);
-  /* border-radius: 50px; */
   padding: 0.01em 0.1em;
   box-shadow: 0px 6px 13px rgba(8, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -225,7 +230,12 @@ nav {
     position: absolute;
     top: 80px;
     right: 10px;
-    background-color: skyblue;
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 121, 113, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
     padding: 20px;
     border-radius: 10px;
     width: 200px;

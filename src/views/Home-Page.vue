@@ -59,7 +59,13 @@
     <div class="services-grid">
       <div class="service-item" v-for="(service, index) in services" :key="index">
         <img :src="service.icon" :alt="service.title" />
-        {{ service.title }}
+        <div>
+          <div style="font-weight: 500">
+            <strong>{{ service.title }}</strong>
+          </div>
+          <br />
+          {{ service.description }}
+        </div>
       </div>
     </div>
   </div>
@@ -254,27 +260,37 @@ export default {
         {
           title: 'Website Development',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/codepen.svg',
+          description: 'Custom websites tailored to your business needs.',
         },
         {
           title: 'Web Application Development',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/react.svg',
+          description: 'Interactive web applications for enhanced user experiences.',
         },
         {
           title: 'Digital Marketing and SEO',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/googleanalytics.svg',
+          description: 'Optimize your website to rank higher on search engine.',
         },
-        { title: 'CCTV Installation and Maintenance', icon: 'src/assets/cctv-camera.png' },
+        {
+          title: 'CCTV Installation and Maintenance',
+          icon: 'src/assets/cctv-camera.png',
+          description: 'Secure your premises with our advanced CCTV systems.',
+        },
         {
           title: 'Web Hosting',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/cloudflare.svg',
+          description: 'Reliable and fast hosting services.',
         },
         {
           title: 'Graphic Designing',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/adobeillustrator.svg',
+          description: 'Creative designs for branding and marketing.',
         },
         {
           title: 'Other IT Services',
           icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/git.svg',
+          description: '24/7 IT support for your business operations.',
         },
       ],
       form: {
@@ -326,7 +342,7 @@ export default {
   position: relative;
   margin-top: -5rem;
   max-width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-color: skyblue; /* Revert to original background color */
   overflow: hidden;
   color: black; /* Revert to original text color */

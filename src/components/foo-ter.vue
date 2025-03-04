@@ -9,6 +9,7 @@
         <p>Phone: <a href="tel:+92 333 3515910">0333-3515910</a></p>
       </div>
       <div class="footer-section quick-links">
+        <h3>Quick Links</h3>
         <nav-bar />
         <nav>
           <RouterLink to="/contact" class="footer-link">Contact Us</RouterLink>
@@ -18,6 +19,7 @@
         </nav>
       </div>
       <div class="footer-section social-media">
+        <h3>Our Social Media</h3>
         <a href="https://facebook.com" class="footer-link">
           <img src="../assets/facebook.png" alt="Facebook" />
         </a>
@@ -31,6 +33,10 @@
           <img src="../assets/instaicon.png" alt="Instagram" />
         </a>
       </div>
+      <div class="footer-section subscribe">
+        <input type="email" placeholder="Enter your email" class="subscribe-input" />
+        <button class="subscribe-button">Subscribe</button>
+      </div>
     </div>
   </footer>
 </template>
@@ -41,12 +47,13 @@
 
 <style scoped>
 footer {
-  background-color: skyblue;
-  color: black;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
   position: relative;
   bottom: 0;
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .footer-content {
@@ -54,17 +61,19 @@ footer {
   justify-content: space-around;
   align-items: flex-start;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-section {
-  margin: 0.5rem;
+  margin: 1rem;
   text-align: left;
   flex: 1;
-  min-width: 200px;
+  min-width: 250px;
 }
 
 .footer-link {
-  color: black;
+  color: white;
   text-decoration: none;
   margin: 0.5rem 0;
   display: block;
@@ -73,7 +82,7 @@ footer {
 
 .footer-link:hover {
   text-decoration: underline;
-  color: darkblue;
+  color: #ffdd57;
   transform: scale(1.1);
 }
 
@@ -89,8 +98,8 @@ footer {
 }
 
 .contact-button {
-  background-color: black;
-  color: white;
+  background-color: #ffdd57;
+  color: black;
   border-radius: 20px;
   width: 8rem;
   height: 2rem;
@@ -100,7 +109,38 @@ footer {
 }
 
 .contact-button:hover {
-  background-color: darkblue;
+  background-color: #ffc107;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.subscribe-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.subscribe-button {
+  background-color: #ffdd57;
+  color: black;
+  border-radius: 20px;
+  width: 8rem;
+  height: 2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+  background-color: #ffc107;
 }
 
 @media (max-width: 768px) {
