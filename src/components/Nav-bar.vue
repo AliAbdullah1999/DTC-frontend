@@ -151,18 +151,38 @@ header.scrolled {
   }
 }
 
+@keyframes logoAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 img {
-  width: 160px;
+  width: 120px;
   height: 100%;
   object-fit: contain;
+}
+
+.logo img {
+  width: 120px;
+  height: 100%;
+  object-fit: contain;
+  animation: logoAnimation 3s infinite;
 }
 
 nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  height: 100%;
-  padding-left: 0; /* Remove left padding */
+  height: 80%;
+  padding-left: 15px;
+  padding-right: 15px; /* Remove left padding */
 }
 
 .menu {
@@ -225,7 +245,8 @@ nav {
     padding-left: 0;
   }
   .logo img {
-    width: 100px;
+    width: 90px;
+    position: center center;
   }
   .menu {
     display: none;
