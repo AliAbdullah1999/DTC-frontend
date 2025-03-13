@@ -259,7 +259,7 @@ export default {
       services: [
         {
           title: 'Website & App Development',
-          icon: './assets/web3.png',
+          icon: require('@/assets/web3.png'),
           description: 'Custom websites tailored to your business needs.',
         },
         {
