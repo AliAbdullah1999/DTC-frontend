@@ -46,7 +46,7 @@
       </div>
     </div>
     <div class="about-image">
-      <img src="@/assets/about.jpg" alt="About Us" />
+      <img src="@/assets/about2.jpg" alt="About Us" />
     </div>
   </div>
 
@@ -258,8 +258,8 @@ export default {
       ],
       services: [
         {
-          title: 'Website Development',
-          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/codepen.svg',
+          title: 'Website & App Development',
+          icon: './assets/web3.png',
           description: 'Custom websites tailored to your business needs.',
         },
         {
