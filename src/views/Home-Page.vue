@@ -259,22 +259,18 @@ export default {
       services: [
         {
           title: 'Website & App Development',
-          icon: require('@/assets/web3.png'),
+          icon: 'src/assets/web3.png',
           description: 'Custom websites tailored to your business needs.',
         },
-        {
-          title: 'Web Application Development',
-          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/react.svg',
-          description: 'Interactive web applications for enhanced user experiences.',
-        },
+     
         {
           title: 'Digital Marketing and SEO',
-          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/googleanalytics.svg',
+          icon: '/src/assets/dm1.jpg',
           description: 'Optimize your website to rank higher on search engine.',
         },
         {
           title: 'CCTV Installation and Maintenance',
-          icon: 'src/assets/cctv-camera.png',
+          icon: 'src/assets/CCTV1.png',
           description: 'Secure your premises with our advanced CCTV systems.',
         },
         {
