@@ -342,6 +342,7 @@ export default {
   position: relative;
   /* margin-top: -5rem; */
   max-width: 100%;
+  /* margin-left: 2rem; */
   height: 70vh;
   background-color: skyblue; /* Revert to original background color */
   overflow: hidden;
@@ -363,6 +364,7 @@ export default {
 .carousel-item {
   min-width: 100%;
   display: flex;
+  margin-left: 0.5em;
   justify-content: center;
   align-items: center;
   animation: fadeIn 1s ease-in-out;
