@@ -19,7 +19,7 @@
         </p>
       </div>
       <div class="about-image animate-image">
-        <img src="@/assets/th (1).jpeg" alt="Team Image 1" class="about-image1" />
+        <img src="/src/assets/about2.jpg" alt="Team Image 1" class="about-image1" />
       </div>
     </section>
   </div>
@@ -52,7 +52,7 @@
       <p>
         We take pride in our customer-centric approach, working closely with each client to deliver
         tailored solutions that drive real results. Whether it’s web development, hosting, digital
-        marketing, or IT consulting, our team is dedicated to helping your business thrive.
+        marketing, or IT consulting, our team is dedicated to helping your business thrive. We do what we have to meet the demand of our clients.
       </p>
       <p>
         Join us on the journey to digital transformation. Together, we can shape the future of your
@@ -180,8 +180,7 @@ const items = ref([
 .about-image img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  
   transition: transform 0.3s ease;
 }
 
