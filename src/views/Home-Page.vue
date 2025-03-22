@@ -262,25 +262,25 @@ export default {
           icon: 'src/assets/web3.png',
           description: 'Custom websites tailored to your business needs.',
         },
-     
+
         {
           title: 'Digital Marketing and SEO',
-          icon: '/src/assets/dm1.jpg',
+          icon: '/src/assets/DM1.png',
           description: 'Optimize your website to rank higher on search engine.',
         },
         {
-          title: 'CCTV Installation and Maintenance',
+          title: 'CCTV Services',
           icon: 'src/assets/CCTV1.png',
           description: 'Secure your premises with our advanced CCTV systems.',
         },
         {
           title: 'Web Hosting',
-          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/cloudflare.svg',
+          icon: 'src/assets/web',
           description: 'Reliable and fast hosting services.',
         },
         {
           title: 'Graphic Designing',
-          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/adobeillustrator.svg',
+          icon: 'src/assets/gd1.jpg',
           description: 'Creative designs for branding and marketing.',
         },
         {
@@ -556,7 +556,7 @@ img {
 }
 
 .service-item img {
-  width: 40px;
+  width: 100%;
   height: 40px;
   margin-bottom: 15px;
 }
