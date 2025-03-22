@@ -250,11 +250,6 @@ export default {
           description: `Elevating your brand's presence with data-driven strategies and creative campaigns. We specialize in connecting you with your audience through targeted advertising, SEO, social media management, and content marketing. Let us help you drive engagement, increase conversions, and achieve measurable growth in the digital space.`,
           image: 'src/assets/DM1.png',
         },
-        {
-          title: 'CCTV Solutions',
-          description: `Ensuring your safety with high-quality CCTV security systems designed to protect what matters most. Our advanced surveillance solutions provide reliable monitoring, clear visuals, and seamless integration for homes and businesses. Trust us to deliver customized security systems that give you peace of mind and round-the-clock protection.`,
-          image: 'src/assets/CCTV1.png',
-        },
       ],
       services: [
         {
@@ -268,24 +263,20 @@ export default {
           icon: '/src/assets/DM1.png',
           description: 'Optimize your website to rank higher on search engine.',
         },
-        {
-          title: 'CCTV Services',
-          icon: 'src/assets/CCTV1.png',
-          description: 'Secure your premises with our advanced CCTV systems.',
-        },
+
         {
           title: 'Web Hosting',
-          icon: 'src/assets/web',
+          icon: 'src/assets/web1.png',
           description: 'Reliable and fast hosting services.',
         },
         {
           title: 'Graphic Designing',
-          icon: 'src/assets/gd1.jpg',
+          icon: 'src/assets/gd1-removebg-preview.png',
           description: 'Creative designs for branding and marketing.',
         },
         {
           title: 'Other IT Services',
-          icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/git.svg',
+          icon: 'src/assets/IT_services_3-removebg-preview.png',
           description: '24/7 IT support for your business operations.',
         },
       ],

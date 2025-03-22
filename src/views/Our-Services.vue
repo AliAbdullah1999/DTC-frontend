@@ -22,39 +22,34 @@
 <script setup>
 const services = [
   {
-    title: 'Web Development',
+    title: 'Website & App Development',
     description: 'Custom websites tailored to your business needs.',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/codepen.svg',
+    icon: 'src/assets/web3.png',
   },
   {
     title: 'Web Hosting',
     description: 'Reliable and fast hosting services.',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/cloudflare.svg',
+    icon: 'src/assets/web1.png',
   },
   {
     title: 'SEO',
     description: 'Optimize your website to rank higher on search engines.',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/googleanalytics.svg',
+    icon: 'src/assets/dm1.png',
   },
   {
     title: 'Digital Marketing',
     description: 'Promote your business across digital platforms.',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/facebook.svg',
+    icon: 'src/assets/DM1.png',
   },
   {
     title: 'Graphic Designing',
     description: 'Creative designs for branding and marketing.',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/adobeillustrator.svg',
+    icon: 'src/assets/gd1-removebg-preview.png',
   },
   {
     title: 'IT Support',
     description: '24/7 IT support for your business operations.',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/git.svg',
-  },
-  {
-    title: 'CCTV Installation',
-    description: 'Secure your premises with our advanced CCTV systems.',
-    icon: 'src/assets/cctv-camera.png',
+    icon: 'src/assets/IT_services_3-removebg-preview.png',
   },
 ]
 </script>
@@ -106,12 +101,13 @@ const services = [
 }
 
 .card .icon img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 12em;
+  margin-bottom: 15px;
 }
 
 .card h2 {
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   color: #333;
   margin-bottom: 1rem;
   letter-spacing: 1px;
@@ -126,9 +122,9 @@ const services = [
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  background-color: skyblue;
-  animation: hoverEffect 0.3s ease-in-out;
+  background-color: darkblue !important;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  color: white;
 }
 
 .card:hover h2,

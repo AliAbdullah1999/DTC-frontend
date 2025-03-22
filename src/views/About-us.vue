@@ -19,7 +19,7 @@
         </p>
       </div>
       <div class="about-image animate-image">
-        <img src="/src/assets/about2.jpg" alt="Team Image 1" class="about-image1" />
+        <img src="/src/assets/teamwork.jpg" alt="Team Image 1" class="about-image1" />
       </div>
     </section>
   </div>
@@ -52,7 +52,8 @@
       <p>
         We take pride in our customer-centric approach, working closely with each client to deliver
         tailored solutions that drive real results. Whether it’s web development, hosting, digital
-        marketing, or IT consulting, our team is dedicated to helping your business thrive. We do what we have to meet the demand of our clients.
+        marketing, or IT consulting, our team is dedicated to helping your business thrive. We do
+        what we have to meet the demand of our clients.
       </p>
       <p>
         Join us on the journey to digital transformation. Together, we can shape the future of your
@@ -65,60 +66,13 @@
       <img src="@/assets/DM1.png" alt="CEO Image" />
     </div>
   </div>
-  <div class="carousel">
-    <h2>What we can do for you</h2>
-    <div class="carousel-container">
-      <div class="carousel-slider">
-        <div class="carousel-slide" v-for="(item, index) in items" :key="index">
-          <img :src="item.icon" :alt="item.title" />
-          <p>{{ item.title }}</p>
-        </div>
-        <!-- Duplicates for continuous scroll -->
-        <div class="carousel-slide" v-for="(item, index) in items" :key="'duplicate-' + index">
-          <img :src="item.icon" :alt="item.title" />
-          <p>{{ item.title }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/whatsapp.svg" alt="WhatsApp" />
   </a>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-
-const items = ref([
-  {
-    title: 'E-commerce Websites',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/shopify.svg',
-  },
-  {
-    title: 'Blog Websites',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/blogger.svg',
-  },
-  {
-    title: 'Portfolio Websites',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/behance.svg',
-  },
-  {
-    title: 'Social Media Applications',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/facebook.svg',
-  },
-  {
-    title: 'SaaS Applications',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/slack.svg',
-  },
-  {
-    title: 'News Websites',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/medium.svg',
-  },
-  {
-    title: 'Project Management Tools',
-    icon: 'https://cdn.jsdelivr.net/npm/simple-icons@7.0.0/icons/trello.svg',
-  },
-])
 </script>
 
 <style scoped>
@@ -180,7 +134,7 @@ const items = ref([
 .about-image img {
   width: 100%;
   height: auto;
-  
+
   transition: transform 0.3s ease;
 }
 
