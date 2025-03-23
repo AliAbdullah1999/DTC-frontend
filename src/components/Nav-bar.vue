@@ -27,9 +27,13 @@
               >Services</RouterLink
             >
             <div class="dropdown-content">
-              <RouterLink to="/services/service1" @click="closeMenu">Service 1</RouterLink>
-              <RouterLink to="/services/service2" @click="closeMenu">Service 2</RouterLink>
-              <RouterLink to="/services/service3" @click="closeMenu">Service 3</RouterLink>
+              <RouterLink to="/services/Web-Development" @click="closeMenu"
+                >Web Development</RouterLink
+              >
+              <RouterLink to="/services/Digital-Marketing" @click="closeMenu"
+                >Digital Marketing</RouterLink
+              >
+              <RouterLink to="/services/SEO" @click="closeMenu">SEO</RouterLink>
             </div>
           </div>
         </li>
@@ -256,23 +260,28 @@ nav {
 
 .dropdown-content {
   display: none;
+  align-content: center;
+  /* text-align: ;eft; */
   position: absolute;
-  background-color: white;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  background-color: transparent;
   flex-direction: column;
 }
 
 .dropdown-content a {
-  color: black;
-  padding: 12px 10px;
+  color: rgb(243, 208, 9);
+  padding: 3px 6px 5px 5px;
+  /* background-width: fit-content; */
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: skyblue;
+  color: white;
 }
 
 .dropdown:hover .dropdown-content {
