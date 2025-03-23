@@ -26,11 +26,7 @@ const services = [
     description: 'Custom websites tailored to your business needs.',
     icon: 'src/assets/web3.png',
   },
-  {
-    title: 'Web Hosting',
-    description: 'Reliable and fast hosting services.',
-    icon: 'src/assets/web1.png',
-  },
+
   {
     title: 'SEO',
     description: 'Optimize your website to rank higher on search engines.',
@@ -45,11 +41,6 @@ const services = [
     title: 'Graphic Designing',
     description: 'Creative designs for branding and marketing.',
     icon: 'src/assets/gd1-removebg-preview.png',
-  },
-  {
-    title: 'IT Support',
-    description: '24/7 IT support for your business operations.',
-    icon: 'src/assets/IT_services_3-removebg-preview.png',
   },
 ]
 </script>

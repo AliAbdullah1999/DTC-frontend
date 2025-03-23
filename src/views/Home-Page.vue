@@ -265,20 +265,15 @@ export default {
         },
 
         {
-          title: 'Web Hosting',
-          icon: 'src/assets/web1.png',
-          description: 'Reliable and fast hosting services.',
-        },
-        {
           title: 'Graphic Designing',
           icon: 'src/assets/gd1-removebg-preview.png',
           description: 'Creative designs for branding and marketing.',
         },
-        {
-          title: 'Other IT Services',
-          icon: 'src/assets/IT_services_3-removebg-preview.png',
-          description: '24/7 IT support for your business operations.',
-        },
+        // {
+        //   title: 'Other IT Services',
+        //   icon: 'src/assets/IT_services_3-removebg-preview.png',
+        //   description: '24/7 IT support for your business operations.',
+        // },
       ],
       form: {
         name: '',

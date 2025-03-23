@@ -18,12 +18,28 @@
           >
         </li>
         <li>
+          <div class="dropdown">
+            <RouterLink
+              to="/services"
+              class="nav-link"
+              active-class="nav-link-active"
+              @click="closeMenu"
+              >Services</RouterLink
+            >
+            <div class="dropdown-content">
+              <RouterLink to="/services/service1" @click="closeMenu">Service 1</RouterLink>
+              <RouterLink to="/services/service2" @click="closeMenu">Service 2</RouterLink>
+              <RouterLink to="/services/service3" @click="closeMenu">Service 3</RouterLink>
+            </div>
+          </div>
+        </li>
+        <li>
           <RouterLink
-            to="/services"
+            to="/Pricing"
             class="nav-link"
             active-class="nav-link-active"
             @click="closeMenu"
-            >Services</RouterLink
+            >Pricing Plan</RouterLink
           >
         </li>
         <li>
@@ -198,7 +214,7 @@ nav {
 }
 
 .nav-link {
-  color: black;
+  color: rgb(243, 208, 9);
   text-decoration: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -229,6 +245,41 @@ nav {
 .hamburger span {
   width: 20px;
   height: 3px;
+  background-color: black;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown:hover .nav-link {
   background-color: black;
   color: white;
 }
