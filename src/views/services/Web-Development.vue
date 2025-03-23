@@ -5,7 +5,7 @@
 </template>
 <script>
 export default {
-  name: 'Web-Development',
+  name: 'WebDevelopment',
 }
 </script>
 <style>
